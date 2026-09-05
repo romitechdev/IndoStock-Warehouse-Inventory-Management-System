@@ -1,28 +1,28 @@
-# IndoStock - Rancang Bangun Sistem Basis Data Manajemen Inventaris Gudang
+# IndoStock - Design and Build of a Warehouse Inventory Management Database System
 
-IndoStock adalah purwarupa (prototype) sistem informasi manajemen inventaris gudang berbasis Relational Database Management System (RDBMS) yang dirancang khusus untuk studi kasus minimarket modern Indomaret. Proyek ini mengintegrasikan lima entitas master data (Karyawan, Kategori, Rak, Supplier, Produk) dengan tiga entitas transaksional utama (Barang Masuk, Barang Keluar, Retur Barang).
+IndoStock is a prototype of a warehouse inventory management information system based on a Relational Database Management System (RDBMS), specifically designed for the Indomaret modern minimarket case study. This project integrates five master data entities (Employees, Categories, Shelves, Suppliers, Products) with three main transactional entities (Goods In, Goods Out, Goods Return).
 
-Sistem ini dikembangkan menggunakan Microsoft Access sebagai database engine dan Visual Basic for Applications (VBA) sebagai logika kontrol antarmuka dinamis.
+The system is built using Microsoft Access as the database engine and Visual Basic for Applications (VBA) as the logic for dynamic interface control.
 
-## 🚀 Fitur Utama Sistem
-- **Role-Based Otorisasi Dinamis (VBA):** Membatasi hak akses menu navigasi secara real-time. Akun dengan role *Pramuniaga* secara otomatis dikunci aksesnya dari menu administratif (Data Karyawan, Supplier, dan Laporan), sedangkan *Store Leader* memiliki otoritas penuh.
-- **Otomatisasi Kalkulasi Metrik & Agregasi (SQL):** Perhitungan akumulasi sisa stok fisik secara otomatis melalui fungsi agregasi RDBMS seiring terjadinya transaksi barang masuk dan keluar untuk menghindari risiko *human error*.
-- **Sistem Validasi Pencegahan Anomali:** Implementasi logika kontrol matematika untuk memblokir transaksi secara mutlak jika kuantitas barang keluar melebihi sisa stok fisik gudang (*Stok Tidak Mencukupi*).
-- **Integritas Referensial & Pencegahan Delete Anomaly:** Pengaturan relasi database yang kokoh tanpa memicu *Cascade Delete* demi menjaga keamanan rekam jejak audit (*audit trail*) transaksional logistik.
-- **Context-Sensitive Help System:** Integrasi berkas bantuan digital interaktif (.chm) yang dibuat via HelpNDoc dan dapat dipanggil langsung dari antarmuka sidebar dashboard menggunakan Windows API.
+## 🚀 Key System Features
+- **Dynamic Role-Based Authorization (VBA):** Restricts navigation menu access rights in real time. Accounts with the *Pramuniaga* role are automatically locked out of administrative menus (Employee Data, Suppliers, and Reports), while the *Store Leader* has full authorization.
+- **Metric Calculation & Aggregation Automation (SQL):** Automatic calculation of cumulative physical stock balances through RDBMS aggregate functions as goods in and goods out transactions occur, to eliminate the risk of *human error*.
+- **Anomaly Prevention Validation System:** Implementation of mathematical control logic to absolutely block transactions if the quantity of outgoing goods exceeds the physical warehouse stock balance (*Insufficient Stock*).
+- **Referential Integrity & Delete Anomaly Prevention:** Robust database relationship configuration without triggering *Cascade Delete*, in order to preserve the safety of the transactional logistics audit trail (*audit trail*).
+- **Context-Sensitive Help System:** Integration of an interactive digital help file (.chm) created with HelpNDoc, which can be invoked directly from the dashboard sidebar interface using the Windows API.
 
-## 📁 Struktur Repositori
-- `/Database`: Berisi file purwarupa database fisik `IndoStock.accdb`.
-- `/Aplikasi_Manual`: Berisi berkas bantuan digital interaktif `manual.chm` yang terintegrasi langsung dengan tombol sistem bantuan di dalam aplikasi.
+## 📁 Repository Structure
+- `/Database`: Contains the physical database prototype file `IndoStock.accdb`.
+- `/Aplikasi_Manual`: Contains the interactive digital help file `manual.chm` that is directly integrated with the system help button inside the application.
 
-## 🎓 Publikasi & Hasil Pengujian
-Proyek ini telah dipresentasikan dan diuji secara komprehensif menggunakan metode *Black-Box Testing*. Analisis teoretis dan teknis mendalam mengenai sistem ini telah didokumentasikan dalam artikel ilmiah kelompok kami yang memiliki *Similarity Index* sebesar **5% (Turnitin)**.
+## 🎓 Publication & Testing Results
+This project has been presented and comprehensively tested using the *Black-Box Testing* method. An in-depth theoretical and technical analysis of the system has been documented in our group's scientific article, which has a *Similarity Index* of **5% (Turnitin)**.
 
-- **Artikel Ilmiah Resmi:** Dapat diakses secara terbuka melalui repositori akademik di [ResearchGate]().
+- **Official Scientific Article:** Available for open access through the academic repository on [ResearchGate]().
 
-## 👥 Tim Pengembang (Class of 2025B)
-Proyek ini dibangun sebagai luaran tugas akhir mata kuliah Basis Data, Program Studi Sistem Informasi, Universitas Negeri Surabaya oleh:
+## 👥 Development Team (Class of 2025B)
+This project was built as a final assignment for the Database course, Information Systems Study Program, Universitas Negeri Surabaya, by:
 1. Muhromin (Project Leader & System Analyst)
 2. Yasmin Nur Fadila (System Designer)
-3. Inka Nadia Faridiani (Implementator)
-4. Muhammad Nadhif Afkar (Dokumentator)
+3. Inka Nadia Faridiani (Implementer)
+4. Muhammad Nadhif Afkar (Documentation)
